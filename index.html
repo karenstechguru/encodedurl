@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify</title>
+    <script defer src="scripts.js"></script> <!-- Properly referenced JavaScript file -->
+  <style>
+    body {
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #555;
+    }
+
+    .captcha-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .captcha-text {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .spinner {
+      margin: 0 auto;
+      width: 36px;
+      height: 36px;
+      border: 4px solid #dcdcdc;
+      border-top: 4px solid #4285f4;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .error-message {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .error-message strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .error-message p {
+      font-size: 14px;
+      color: #777;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="captcha-box">
+    <div class="captcha-text">Refresh this page or press any key</div>
+    <div class="spinner"></div>
+  </div>
+
+  <div class="error-message">
+    <strong>Your browser has encountered an error</strong>
+    <p></p>
+  </div>
+
+</body>
+</html>
